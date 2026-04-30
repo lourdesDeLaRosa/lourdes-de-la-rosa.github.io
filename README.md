@@ -3,7 +3,7 @@
 Personal portfolio website showcasing my projects, technical skills, and contact information.
 
 ## Live Website
-https://lourdesdelarosa.github.io
+https://lourdesdelarosa.github.io/lourdes-de-la-rosa.github.io/
 
 ## Technologies Used
 - HTML5
