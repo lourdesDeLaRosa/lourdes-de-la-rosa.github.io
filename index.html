@@ -15,41 +15,24 @@
 --accent:#bb86fc;
 }
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-html{
-scroll-behavior:smooth;
-}
-
+*{margin:0;padding:0;box-sizing:border-box}
 body{
-font-family:Arial, Helvetica, sans-serif;
+font-family:Arial,Helvetica,sans-serif;
 background:linear-gradient(180deg,#15131f,#181523);
 color:var(--text);
 line-height:1.6;
 }
-
-a{
-text-decoration:none;
-color:inherit;
-}
-
-.wrap{
-max-width:1100px;
-margin:auto;
-padding:0 22px;
-}
+a{text-decoration:none;color:inherit}
+.wrap{max-width:1100px;margin:auto;padding:0 22px}
+html{scroll-behavior:smooth}
 
 nav{
 position:sticky;
 top:0;
-z-index:999;
 background:rgba(21,19,31,.92);
-backdrop-filter:blur(12px);
+backdrop-filter:blur(10px);
 border-bottom:1px solid var(--line);
+z-index:999;
 }
 
 nav .wrap{
@@ -59,82 +42,42 @@ align-items:center;
 padding:18px 0;
 }
 
-.logo{
-font-weight:bold;
-font-size:20px;
-color:var(--accent);
-}
+.logo{font-size:20px;font-weight:bold;color:var(--accent)}
+.links{display:flex;gap:20px;color:var(--muted)}
+.links a:hover{color:white}
 
-.links{
-display:flex;
-gap:20px;
-color:var(--muted);
-font-size:14px;
-}
-
-.links a:hover{
-color:white;
-}
-
-.hero{
-padding:90px 0 70px;
-}
-
+.hero{padding:90px 0 70px}
 .tag{
 display:inline-block;
 padding:7px 14px;
 border:1px solid var(--line);
 border-radius:999px;
-font-size:13px;
 color:var(--accent);
+font-size:13px;
 margin-bottom:20px;
 }
 
-.hero h1{
-font-size:58px;
-line-height:1.05;
-margin-bottom:18px;
-}
+.hero h1{font-size:58px;margin-bottom:15px}
+.hero p{max-width:650px;color:var(--muted);font-size:18px}
 
-.hero p{
-max-width:650px;
-font-size:18px;
-color:var(--muted);
-}
-
-.btns{
-display:flex;
-gap:12px;
-margin-top:28px;
-flex-wrap:wrap;
-}
-
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
 .btn{
 padding:12px 18px;
 border-radius:10px;
 border:1px solid var(--line);
-transition:.2s;
 cursor:pointer;
+transition:.2s;
+display:inline-block;
 }
-
-.btn:hover{
-transform:translateY(-2px);
-}
-
+.btn:hover{transform:translateY(-2px)}
 .primary{
-background:linear-gradient(135deg,var(--accent),#d4a7ff);
+background:linear-gradient(135deg,var(--accent),#d3a7ff);
 color:#111;
 font-weight:bold;
 }
 
-.section{
-padding:50px 0;
-}
-
-.title{
-font-size:34px;
-margin-bottom:25px;
-}
+.section{padding:50px 0}
+.title{font-size:34px;margin-bottom:25px}
 
 .grid{
 display:grid;
@@ -147,69 +90,25 @@ background:var(--card);
 border:1px solid var(--line);
 border-radius:18px;
 padding:24px;
-box-shadow:0 10px 25px rgba(0,0,0,.18);
+box-shadow:0 10px 24px rgba(0,0,0,.18);
 }
 
-.card h3{
-margin-bottom:10px;
-font-size:24px;
-}
-
-.muted{
-color:var(--muted);
-}
+.card h3{margin-bottom:10px;font-size:24px}
+.muted{color:var(--muted)}
 
 .tags{
 display:flex;
 gap:8px;
 flex-wrap:wrap;
-margin-top:14px;
+margin-top:15px;
 }
 
 .chip{
 padding:6px 10px;
 border-radius:999px;
-background:#262238;
+background:#28243a;
 font-size:12px;
 color:var(--accent);
-}
-
-.project-gallery{
-margin-top:25px;
-}
-
-.main-image img{
-width:100%;
-border-radius:14px;
-border:1px solid var(--line);
-}
-
-.thumbs{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(90px,1fr));
-gap:10px;
-margin-top:12px;
-}
-
-.thumbs img{
-width:100%;
-height:72px;
-object-fit:cover;
-border-radius:10px;
-cursor:pointer;
-border:2px solid transparent;
-opacity:.75;
-transition:.2s;
-}
-
-.thumbs img:hover{
-transform:scale(1.05);
-opacity:1;
-}
-
-.active-thumb{
-border:2px solid var(--accent)!important;
-opacity:1!important;
 }
 
 .two{
@@ -219,24 +118,23 @@ gap:18px;
 }
 
 .contact-item{
-margin-bottom:18px;
-font-size:17px;
+margin-bottom:15px;
 color:var(--muted);
 }
 
 footer{
-margin-top:50px;
-padding:28px 0;
+padding:30px 0;
 border-top:1px solid var(--line);
 text-align:center;
 color:var(--muted);
+margin-top:40px;
 }
 
 .modal{
 display:none;
 position:fixed;
 inset:0;
-background:rgba(0,0,0,.65);
+background:rgba(0,0,0,.75);
 z-index:9999;
 justify-content:center;
 align-items:center;
@@ -246,32 +144,59 @@ padding:20px;
 .modal-box{
 background:var(--card);
 border:1px solid var(--line);
-padding:28px;
 border-radius:18px;
-max-width:400px;
+padding:22px;
 width:100%;
+max-width:1100px;
+max-height:90vh;
+overflow:auto;
 }
 
-.modal-box h3{
-margin-bottom:10px;
+.gallery-main img{
+width:100%;
+border-radius:14px;
+border:1px solid var(--line);
 }
 
-.modal-box .btn{
-display:block;
-text-align:center;
-margin-top:10px;
+.gallery-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(130px,1fr));
+gap:10px;
+margin-top:14px;
+}
+
+.gallery-grid img{
+width:100%;
+height:90px;
+object-fit:cover;
+border-radius:10px;
+cursor:pointer;
+border:2px solid transparent;
+opacity:.8;
+transition:.2s;
+}
+
+.gallery-grid img:hover{
+opacity:1;
+transform:scale(1.04);
+}
+
+.active-thumb{
+border:2px solid var(--accent)!important;
+opacity:1!important;
+}
+
+.top-modal{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:15px;
 }
 
 @media(max-width:760px){
-.hero h1{
-font-size:42px;
-}
-.links{
-display:none;
-}
-.two{
-grid-template-columns:1fr;
-}
+.hero h1{font-size:42px}
+.links{display:none}
+.two{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -281,7 +206,6 @@ grid-template-columns:1fr;
 <nav>
 <div class="wrap">
 <div class="logo">Lourdes.dev</div>
-
 <div class="links">
 <a href="#projects">Projects</a>
 <a href="#about">About</a>
@@ -292,46 +216,113 @@ grid-template-columns:1fr;
 
 <section class="hero wrap">
 <div class="tag">Open to internships & junior roles</div>
-
 <h1>Lourdes de la Rosa</h1>
-
-<p>
-Software Engineering student focused on building desktop business systems, databases and practical software solutions using C#, SQL Server and JavaScript.
-</p>
+<p>Software Engineering student focused on desktop systems, SQL databases and practical business solutions.</p>
 
 <div class="btns">
 <a href="#projects" class="btn primary">View Projects</a>
 <a href="#contact" class="btn">Contact</a>
-<a href="#" class="btn" onclick="openCV()">Download CV</a>
+<a href="#" onclick="openCV()" class="btn">Download CV</a>
 </div>
 </section>
 
 <section id="projects" class="section wrap">
-
 <h2 class="title">Projects</h2>
 
+<div class="grid">
+
 <div class="card">
-
 <h3>POS System</h3>
-
-<p class="muted">
-Point of Sale desktop system with clients, products, categories, users, roles, purchases, sales and income management.
-</p>
+<p class="muted">Sales system with users, roles, clients, products, inventory, purchases and reports.</p>
 
 <div class="tags">
 <span class="chip">C#</span>
 <span class="chip">SQL Server</span>
 <span class="chip">WinForms</span>
-<span class="chip">CRUD</span>
 </div>
 
-<div class="project-gallery">
+<div class="btns">
+<a href="#" onclick="openPOS()" class="btn primary">View Gallery</a>
+</div>
+</div>
 
-<div class="main-image">
+<div class="card">
+<h3>Contacts Manager</h3>
+<p class="muted">JavaScript application for managing contacts.</p>
+
+<div class="tags">
+<span class="chip">JavaScript</span>
+<span class="chip">HTML</span>
+<span class="chip">CSS</span>
+</div>
+</div>
+
+<div class="card">
+<h3>Portfolio Website</h3>
+<p class="muted">Responsive portfolio website built with HTML/CSS.</p>
+
+<div class="tags">
+<span class="chip">HTML</span>
+<span class="chip">CSS</span>
+</div>
+</div>
+
+</div>
+</section>
+
+<section id="about" class="section wrap two">
+
+<div class="card">
+<h2 class="title">About Me</h2>
+<p class="muted">Currently studying Software Engineering at INTEC. Interested in software development, UI and databases.</p>
+</div>
+
+<div class="card">
+<h2 class="title">Skills</h2>
+<p class="muted">C# · SQL Server · JavaScript · HTML/CSS · Git · CRUD · OOP</p>
+</div>
+
+</section>
+
+<section id="contact" class="section wrap">
+<div class="card">
+<h2 class="title">Contact</h2>
+<div class="contact-item">Email: lourdesdelarosaramirez225@gmail.com</div>
+<div class="contact-item">GitHub: github.com/lourdesDeLaRosa</div>
+<div class="contact-item">LinkedIn: linkedin.com/in/lourdes-de-la-rosa</div>
+<div class="contact-item">Dominican Republic</div>
+</div>
+</section>
+
+<footer>
+© 2026 Lourdes de la Rosa
+</footer>
+
+<div class="modal" id="cvModal">
+<div class="modal-box" style="max-width:420px">
+
+<h3 style="margin-bottom:10px">Choose CV</h3>
+
+<a href="lourdesDeLaRosaCV.pdf" target="_blank" class="btn primary">CV Español</a>
+<a href="lourdesDeLaRosaCV_ENG.pdf" target="_blank" class="btn" style="margin-top:10px">CV English</a>
+<a href="#" onclick="closeCV()" class="btn" style="margin-top:10px">Close</a>
+
+</div>
+</div>
+
+<div class="modal" id="posModal">
+<div class="modal-box">
+
+<div class="top-modal">
+<h3>POS System Gallery</h3>
+<a href="#" onclick="closePOS()" class="btn">Close</a>
+</div>
+
+<div class="gallery-main">
 <img id="mainPOS" src="images/login.png">
 </div>
 
-<div class="thumbs">
+<div class="gallery-grid">
 
 <img src="images/login.png" onclick="changePOS(this)" class="active-thumb">
 <img src="images/articulos_cons.png" onclick="changePOS(this)">
@@ -352,109 +343,35 @@ Point of Sale desktop system with clients, products, categories, users, roles, p
 <img src="images/ventas_mant.png" onclick="changePOS(this)">
 
 </div>
-</div>
-</div>
-
-<br>
-
-<div class="grid">
-
-<div class="card">
-<h3>Contacts Manager</h3>
-<p class="muted">
-JavaScript application to manage contacts with add, edit, delete and search features.
-</p>
-
-<div class="tags">
-<span class="chip">JavaScript</span>
-<span class="chip">HTML</span>
-<span class="chip">CSS</span>
-</div>
-</div>
-
-<div class="card">
-<h3>Portfolio Website</h3>
-<p class="muted">
-Responsive portfolio website created to showcase projects and skills.
-</p>
-
-<div class="tags">
-<span class="chip">HTML</span>
-<span class="chip">CSS</span>
-</div>
-</div>
-
-</div>
-
-</section>
-
-<section id="about" class="section wrap two">
-
-<div class="card">
-<h2 class="title">About Me</h2>
-
-<p class="muted">
-Currently studying Software Engineering at INTEC. Passionate about software development, databases, UI design and continuous growth.
-</p>
-</div>
-
-<div class="card">
-<h2 class="title">Skills</h2>
-
-<p class="muted">
-C# · .NET · SQL Server · JavaScript · HTML/CSS · Git · OOP · CRUD
-</p>
-</div>
-
-</section>
-
-<section id="contact" class="section wrap">
-
-<div class="card">
-
-<h2 class="title">Contact</h2>
-
-<div class="contact-item">Email: lourdesdelarosaramirez225@gmail.com</div>
-<div class="contact-item">GitHub: github.com/lourdesDeLaRosa</div>
-<div class="contact-item">LinkedIn: linkedin.com/in/lourdes-de-la-rosa</div>
-<div class="contact-item">Santo Domingo Este, Dominican Republic</div>
-
-</div>
-
-</section>
-
-<footer>
-© 2026 Lourdes de la Rosa
-</footer>
-
-<div class="modal" id="cvModal">
-<div class="modal-box">
-<h3>Select CV Version</h3>
-
-<a href="lourdesDeLaRosaCV.pdf" target="_blank" class="btn primary">CV Español</a>
-<a href="lourdesDeLaRosaCV_ENG.pdf" target="_blank" class="btn">CV English</a>
-<a href="#" class="btn" onclick="closeCV()">Close</a>
 
 </div>
 </div>
 
 <script>
-function changePOS(img){
-document.getElementById("mainPOS").src=img.src;
-
-document.querySelectorAll(".thumbs img").forEach(el=>{
-el.classList.remove("active-thumb");
-});
-
-img.classList.add("active-thumb");
-}
-
 function openCV(){
 document.getElementById("cvModal").style.display="flex";
 }
 
 function closeCV(){
 document.getElementById("cvModal").style.display="none";
+}
+
+function openPOS(){
+document.getElementById("posModal").style.display="flex";
+}
+
+function closePOS(){
+document.getElementById("posModal").style.display="none";
+}
+
+function changePOS(img){
+document.getElementById("mainPOS").src=img.src;
+
+document.querySelectorAll(".gallery-grid img").forEach(el=>{
+el.classList.remove("active-thumb");
+});
+
+img.classList.add("active-thumb");
 }
 </script>
 
