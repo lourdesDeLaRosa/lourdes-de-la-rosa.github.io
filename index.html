@@ -7,11 +7,11 @@
 
 <style>
 :root{
---bg:#14131c;
---card:#1d1b27;
---line:#312d45;
---text:#f5f3fb;
---muted:#b7b1c7;
+--bg:#15131f;
+--card:#1d1a2a;
+--line:#322d47;
+--text:#f5f3ff;
+--muted:#b9b3cf;
 --accent:#bb86fc;
 }
 
@@ -27,7 +27,7 @@ scroll-behavior:smooth;
 
 body{
 font-family:Arial, Helvetica, sans-serif;
-background:var(--bg);
+background:linear-gradient(180deg,#15131f,#181523);
 color:var(--text);
 line-height:1.6;
 }
@@ -38,17 +38,17 @@ color:inherit;
 }
 
 .wrap{
-width:92%;
-max-width:1150px;
+max-width:1100px;
 margin:auto;
+padding:0 22px;
 }
 
 nav{
 position:sticky;
 top:0;
-z-index:50;
-background:rgba(20,19,28,.88);
-backdrop-filter:blur(10px);
+z-index:999;
+background:rgba(21,19,31,.92);
+backdrop-filter:blur(12px);
 border-bottom:1px solid var(--line);
 }
 
@@ -60,29 +60,24 @@ padding:18px 0;
 }
 
 .logo{
-font-size:28px;
 font-weight:bold;
+font-size:20px;
 color:var(--accent);
 }
 
 .links{
 display:flex;
-gap:18px;
-}
-
-.links a{
+gap:20px;
 color:var(--muted);
 font-size:14px;
-transition:.25s;
 }
 
 .links a:hover{
-color:var(--accent);
+color:white;
 }
 
 .hero{
 padding:90px 0 70px;
-text-align:center;
 }
 
 .tag{
@@ -90,81 +85,74 @@ display:inline-block;
 padding:7px 14px;
 border:1px solid var(--line);
 border-radius:999px;
-color:var(--accent);
 font-size:13px;
-margin-bottom:18px;
+color:var(--accent);
+margin-bottom:20px;
 }
 
 .hero h1{
-font-size:56px;
-margin-bottom:14px;
+font-size:58px;
+line-height:1.05;
+margin-bottom:18px;
 }
 
 .hero p{
-max-width:700px;
-margin:auto;
-color:var(--muted);
+max-width:650px;
 font-size:18px;
+color:var(--muted);
 }
 
 .btns{
-margin-top:28px;
 display:flex;
-justify-content:center;
-gap:14px;
+gap:12px;
+margin-top:28px;
 flex-wrap:wrap;
 }
 
 .btn{
-padding:12px 20px;
-border-radius:12px;
+padding:12px 18px;
+border-radius:10px;
 border:1px solid var(--line);
-transition:.25s;
+transition:.2s;
 cursor:pointer;
-display:inline-block;
 }
 
 .btn:hover{
-transform:translateY(-3px);
+transform:translateY(-2px);
 }
 
 .primary{
-background:linear-gradient(135deg,var(--accent),#d2a8ff);
+background:linear-gradient(135deg,var(--accent),#d4a7ff);
 color:#111;
 font-weight:bold;
 }
 
-section{
-padding:55px 0;
+.section{
+padding:50px 0;
 }
 
 .title{
 font-size:34px;
-margin-bottom:28px;
-color:var(--accent);
+margin-bottom:25px;
 }
 
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-gap:24px;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:18px;
 }
 
 .card{
 background:var(--card);
 border:1px solid var(--line);
-padding:24px;
 border-radius:18px;
-transition:.25s;
-}
-
-.card:hover{
-transform:translateY(-5px);
+padding:24px;
+box-shadow:0 10px 25px rgba(0,0,0,.18);
 }
 
 .card h3{
-font-size:28px;
 margin-bottom:10px;
+font-size:24px;
 }
 
 .muted{
@@ -173,83 +161,117 @@ color:var(--muted);
 
 .tags{
 display:flex;
-gap:10px;
+gap:8px;
 flex-wrap:wrap;
-margin-top:16px;
+margin-top:14px;
 }
 
 .chip{
-background:#28243a;
-padding:6px 12px;
+padding:6px 10px;
 border-radius:999px;
-font-size:13px;
+background:#262238;
+font-size:12px;
 color:var(--accent);
 }
 
 .project-gallery{
-margin-bottom:18px;
+margin-top:25px;
 }
 
-.main-shot{
+.main-image img{
 width:100%;
 border-radius:14px;
-margin-bottom:12px;
-border:1px solid rgba(255,255,255,.08);
+border:1px solid var(--line);
 }
 
 .thumbs{
-display:flex;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(90px,1fr));
 gap:10px;
+margin-top:12px;
 }
 
 .thumbs img{
-width:95px;
-height:68px;
+width:100%;
+height:72px;
 object-fit:cover;
 border-radius:10px;
 cursor:pointer;
-opacity:.65;
-transition:.25s;
+border:2px solid transparent;
+opacity:.75;
+transition:.2s;
 }
 
 .thumbs img:hover{
+transform:scale(1.05);
 opacity:1;
-transform:translateY(-2px);
 }
 
 .active-thumb{
-opacity:1 !important;
-outline:2px solid var(--accent);
+border:2px solid var(--accent)!important;
+opacity:1!important;
 }
 
 .two{
 display:grid;
-grid-template-columns:1.1fr .9fr;
-gap:24px;
+grid-template-columns:1.2fr .8fr;
+gap:18px;
+}
+
+.contact-item{
+margin-bottom:18px;
+font-size:17px;
+color:var(--muted);
 }
 
 footer{
-padding:35px 0;
-text-align:center;
+margin-top:50px;
+padding:28px 0;
 border-top:1px solid var(--line);
+text-align:center;
 color:var(--muted);
-margin-top:30px;
+}
+
+.modal{
+display:none;
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.65);
+z-index:9999;
+justify-content:center;
+align-items:center;
+padding:20px;
+}
+
+.modal-box{
+background:var(--card);
+border:1px solid var(--line);
+padding:28px;
+border-radius:18px;
+max-width:400px;
+width:100%;
+}
+
+.modal-box h3{
+margin-bottom:10px;
+}
+
+.modal-box .btn{
+display:block;
+text-align:center;
+margin-top:10px;
 }
 
 @media(max-width:760px){
-
 .hero h1{
-font-size:40px;
+font-size:42px;
 }
-
 .links{
 display:none;
 }
-
 .two{
 grid-template-columns:1fr;
 }
-
 }
 </style>
 </head>
@@ -258,7 +280,6 @@ grid-template-columns:1fr;
 
 <nav>
 <div class="wrap">
-
 <div class="logo">Lourdes.dev</div>
 
 <div class="links">
@@ -266,104 +287,82 @@ grid-template-columns:1fr;
 <a href="#about">About</a>
 <a href="#contact">Contact</a>
 </div>
-
 </div>
 </nav>
 
 <section class="hero wrap">
-
-<span class="tag">Open to internships & junior roles</span>
+<div class="tag">Open to internships & junior roles</div>
 
 <h1>Lourdes de la Rosa</h1>
 
 <p>
-Software Engineering student focused on building practical business software with C#, SQL Server and JavaScript.
-I enjoy turning real processes into clean, functional systems.
+Software Engineering student focused on building desktop business systems, databases and practical software solutions using C#, SQL Server and JavaScript.
 </p>
 
 <div class="btns">
-
 <a href="#projects" class="btn primary">View Projects</a>
-
 <a href="#contact" class="btn">Contact</a>
-
-<a href="#"
-class="btn"
-onclick="document.getElementById('cvModal').style.display='flex';return false;">
-Download CV
-</a>
-
+<a href="#" class="btn" onclick="openCV()">Download CV</a>
 </div>
-
 </section>
 
-<section id="projects" class="wrap">
+<section id="projects" class="section wrap">
 
 <h2 class="title">Projects</h2>
 
-<div class="grid">
-
 <div class="card">
-
-<div class="project-gallery">
-
-<img src="images/pos-login.png" id="posMain" class="main-shot">
-
-<div class="thumbs">
-
-<img src="images/login.png">
-<img src="images/articulos_cons.png">
-<img src="images/articulos_mant.png">
-<img src="images/categorias_cons.png">
-<img src="images/categorias_mant.png">
-<img src="images/clientes_cons.png">
-<img src="images/clientes_mant.png">
-<img src="images/contenedor.png">
-<img src="images/ingresos_cons (2).png">
-<img src="images/ingresos_mant.png">
-<img src="images/proveedores_cons.png">
-<img src="images/proveedores_mant.png">
-<img src="images/roles.png">
-<img src="images/usuarios_cons.png">
-<img src="images/usuarios_mant.png">
-<img src="images/ventas_cons.png">
-<img src="images/ventas_mant.png"
-onclick="changePOS(this)"
-class="active-thumb">
-
-<img src="images/pos-dashboard.png"
-onclick="changePOS(this)">
-
-<img src="images/pos-sales.png"
-onclick="changePOS(this)">
-
-</div>
-</div>
 
 <h3>POS System</h3>
 
 <p class="muted">
-Point of Sale system with sales, clients, products, categories, user roles,
-inventory control and daily income tracking.
+Point of Sale desktop system with clients, products, categories, users, roles, purchases, sales and income management.
 </p>
 
 <div class="tags">
 <span class="chip">C#</span>
 <span class="chip">SQL Server</span>
 <span class="chip">WinForms</span>
+<span class="chip">CRUD</span>
 </div>
 
+<div class="project-gallery">
+
+<div class="main-image">
+<img id="mainPOS" src="images/login.png">
 </div>
 
-<!-- CONTACTS -->
+<div class="thumbs">
+
+<img src="images/login.png" onclick="changePOS(this)" class="active-thumb">
+<img src="images/articulos_cons.png" onclick="changePOS(this)">
+<img src="images/articulos_mant.png" onclick="changePOS(this)">
+<img src="images/categorias_cons.png" onclick="changePOS(this)">
+<img src="images/categorias_mant.png" onclick="changePOS(this)">
+<img src="images/clientes_cons.png" onclick="changePOS(this)">
+<img src="images/clientes_mant.png" onclick="changePOS(this)">
+<img src="images/contenedor.png" onclick="changePOS(this)">
+<img src="images/ingresos_cons (2).png" onclick="changePOS(this)">
+<img src="images/ingresos_mant.png" onclick="changePOS(this)">
+<img src="images/proveedores_cons.png" onclick="changePOS(this)">
+<img src="images/proveedores_mant.png" onclick="changePOS(this)">
+<img src="images/roles.png" onclick="changePOS(this)">
+<img src="images/usuarios_cons.png" onclick="changePOS(this)">
+<img src="images/usuarios_mant.png" onclick="changePOS(this)">
+<img src="images/ventas_cons.png" onclick="changePOS(this)">
+<img src="images/ventas_mant.png" onclick="changePOS(this)">
+
+</div>
+</div>
+</div>
+
+<br>
+
+<div class="grid">
 
 <div class="card">
-
 <h3>Contacts Manager</h3>
-
 <p class="muted">
-JavaScript web app for managing contacts with add, edit, delete,
-search and local storage persistence.
+JavaScript application to manage contacts with add, edit, delete and search features.
 </p>
 
 <div class="tags">
@@ -371,156 +370,91 @@ search and local storage persistence.
 <span class="chip">HTML</span>
 <span class="chip">CSS</span>
 </div>
-
 </div>
 
 <div class="card">
-
 <h3>Portfolio Website</h3>
-
 <p class="muted">
-Responsive personal portfolio built to showcase projects,
-skills and contact information.
+Responsive portfolio website created to showcase projects and skills.
 </p>
 
 <div class="tags">
 <span class="chip">HTML</span>
 <span class="chip">CSS</span>
 </div>
-
 </div>
 
 </div>
+
 </section>
 
-<section id="about" class="wrap">
-
-<div class="two">
+<section id="about" class="section wrap two">
 
 <div class="card">
-
 <h2 class="title">About Me</h2>
 
 <p class="muted">
-Currently studying Software Engineering at INTEC.
-Interested in desktop applications, databases, UI design
-and software architecture. I value clean code,
-responsibility and continuous growth.
+Currently studying Software Engineering at INTEC. Passionate about software development, databases, UI design and continuous growth.
 </p>
-
 </div>
 
 <div class="card">
-
 <h2 class="title">Skills</h2>
 
 <p class="muted">
-C# · .NET · SQL Server · JavaScript · HTML/CSS · Git · OOP · CRUD · Technical Support
+C# · .NET · SQL Server · JavaScript · HTML/CSS · Git · OOP · CRUD
 </p>
-
-</div>
-
 </div>
 
 </section>
 
-<section id="contact" class="wrap">
+<section id="contact" class="section wrap">
 
 <div class="card">
 
 <h2 class="title">Contact</h2>
 
-<p class="muted" style="line-height:2">
-
-✉️ Email:
-<br>
-lourdesdelarosaramirez225@gmail.com
-
-<br><br>
-
-💻 GitHub:
-<br>
-github.com/lourdesDeLaRosa
-
-<br><br>
-
-💼 LinkedIn:
-<br>
-linkedin.com/in/lourdes-de-la-rosa
-
-<br><br>
-
-📍 Santo Domingo Este, Dominican Republic
-
-</p>
+<div class="contact-item">Email: lourdesdelarosaramirez225@gmail.com</div>
+<div class="contact-item">GitHub: github.com/lourdesDeLaRosa</div>
+<div class="contact-item">LinkedIn: linkedin.com/in/lourdes-de-la-rosa</div>
+<div class="contact-item">Santo Domingo Este, Dominican Republic</div>
 
 </div>
 
 </section>
 
-<div id="cvModal"
-style="
-display:none;
-position:fixed;
-inset:0;
-background:rgba(0,0,0,.7);
-z-index:999;
-align-items:center;
-justify-content:center;
-padding:20px;">
-
-<div style="
-background:#1d1b27;
-border:1px solid #312d45;
-padding:28px;
-border-radius:18px;
-max-width:420px;
-width:100%;">
-
-<h3 style="font-size:28px;margin-bottom:12px;">Choose your CV</h3>
-
-<p class="muted" style="margin-bottom:18px;">
-Select the version you would like to open.
-</p>
-
-<div style="display:grid;gap:12px;">
-
-<a href="lourdesDeLaRosaCV_ENG.pdf"
-target="_blank"
-class="btn primary">
-🇺🇸 CV English
-</a>
-
-<a href="lourdesDeLaRosaCV.pdf"
-target="_blank"
-class="btn">
-🇩🇴 CV Español
-</a>
-
-<a href="#"
-class="btn"
-onclick="document.getElementById('cvModal').style.display='none';return false;">
-Close
-</a>
-
-</div>
-</div>
-</div>
-
 <footer>
-© 2026 Lourdes de la Rosa · Santo Domingo, Dominican Republic
+© 2026 Lourdes de la Rosa
 </footer>
+
+<div class="modal" id="cvModal">
+<div class="modal-box">
+<h3>Select CV Version</h3>
+
+<a href="lourdesDeLaRosaCV.pdf" target="_blank" class="btn primary">CV Español</a>
+<a href="lourdesDeLaRosaCV_ENG.pdf" target="_blank" class="btn">CV English</a>
+<a href="#" class="btn" onclick="closeCV()">Close</a>
+
+</div>
+</div>
 
 <script>
 function changePOS(img){
+document.getElementById("mainPOS").src=img.src;
 
-document.getElementById("posMain").src = img.src;
-
-document.querySelectorAll(".thumbs img")
-.forEach(el => el.classList.remove("active-thumb"));
+document.querySelectorAll(".thumbs img").forEach(el=>{
+el.classList.remove("active-thumb");
+});
 
 img.classList.add("active-thumb");
+}
 
+function openCV(){
+document.getElementById("cvModal").style.display="flex";
+}
+
+function closeCV(){
+document.getElementById("cvModal").style.display="none";
 }
 </script>
 
