@@ -333,12 +333,10 @@ Web-based contact management application developed with JavaScript, HTML and CSS
 <span class="chip">HTML</span>
 <span class="chip">CSS</span>
 </div>
-</div>
 
- <div class="btns">
+<div class="btns">
 <a href="#" onclick="openContacts()" class="btn primary">View Gallery</a>
 </div>
-
 </div>
 
 <div class="modal" id="contactsModal">
@@ -354,12 +352,10 @@ Web-based contact management application developed with JavaScript, HTML and CSS
 </div>
 
 <div class="gallery-grid">
-
 <img src="images_contactApp/dashboard.png" onclick="changeContacts(this)" class="active-thumb">
 <img src="images_contactApp/login.png" onclick="changeContacts(this)">
 <img src="images_contactApp/registro.png" onclick="changeContacts(this)">
 <img src="images_contactApp/view.png" onclick="changeContacts(this)">
-
 </div>
 
 </div>
@@ -375,7 +371,7 @@ document.getElementById("contactsModal").style.display="none";
 }
 
 function changeContacts(img){
-document.getElementById("mainContacts").src = img.src;
+document.getElementById("mainContacts").src=img.src;
 
 document.querySelectorAll("#contactsModal .gallery-grid img").forEach(el=>{
 el.classList.remove("active-thumb");
