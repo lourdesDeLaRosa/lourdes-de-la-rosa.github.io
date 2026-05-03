@@ -16,23 +16,31 @@
 }
 
 *{margin:0;padding:0;box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
 body{
 font-family:Arial,Helvetica,sans-serif;
 background:linear-gradient(180deg,#15131f,#181523);
 color:var(--text);
 line-height:1.6;
 }
+
 a{text-decoration:none;color:inherit}
-.wrap{max-width:1100px;margin:auto;padding:0 22px}
-html{scroll-behavior:smooth}
+
+.wrap{
+max-width:1100px;
+margin:auto;
+padding:0 22px;
+}
 
 nav{
 position:sticky;
 top:0;
+z-index:999;
 background:rgba(21,19,31,.92);
 backdrop-filter:blur(10px);
 border-bottom:1px solid var(--line);
-z-index:999;
 }
 
 nav .wrap{
@@ -42,11 +50,26 @@ align-items:center;
 padding:18px 0;
 }
 
-.logo{font-size:20px;font-weight:bold;color:var(--accent)}
-.links{display:flex;gap:20px;color:var(--muted)}
-.links a:hover{color:white}
+.logo{
+font-size:20px;
+font-weight:bold;
+color:var(--accent);
+}
 
-.hero{padding:90px 0 70px}
+.links{
+display:flex;
+gap:20px;
+color:var(--muted);
+}
+
+.links a:hover{
+color:#fff;
+}
+
+.hero{
+padding:90px 0 70px;
+}
+
 .tag{
 display:inline-block;
 padding:7px 14px;
@@ -57,27 +80,51 @@ font-size:13px;
 margin-bottom:20px;
 }
 
-.hero h1{font-size:58px;margin-bottom:15px}
-.hero p{max-width:650px;color:var(--muted);font-size:18px}
+.hero h1{
+font-size:58px;
+margin-bottom:15px;
+}
 
-.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.hero p{
+max-width:650px;
+font-size:18px;
+color:var(--muted);
+}
+
+.btns{
+display:flex;
+gap:12px;
+flex-wrap:wrap;
+margin-top:28px;
+}
+
 .btn{
 padding:12px 18px;
 border-radius:10px;
 border:1px solid var(--line);
 cursor:pointer;
-transition:.2s;
 display:inline-block;
+transition:.2s;
 }
-.btn:hover{transform:translateY(-2px)}
+
+.btn:hover{
+transform:translateY(-2px);
+}
+
 .primary{
 background:linear-gradient(135deg,var(--accent),#d3a7ff);
 color:#111;
 font-weight:bold;
 }
 
-.section{padding:50px 0}
-.title{font-size:34px;margin-bottom:25px}
+.section{
+padding:55px 0;
+}
+
+.title{
+font-size:34px;
+margin-bottom:25px;
+}
 
 .grid{
 display:grid;
@@ -93,8 +140,14 @@ padding:24px;
 box-shadow:0 10px 24px rgba(0,0,0,.18);
 }
 
-.card h3{margin-bottom:10px;font-size:24px}
-.muted{color:var(--muted)}
+.card h3{
+margin-bottom:10px;
+font-size:24px;
+}
+
+.muted{
+color:var(--muted);
+}
 
 .tags{
 display:flex;
@@ -118,16 +171,16 @@ gap:18px;
 }
 
 .contact-item{
-margin-bottom:15px;
+margin-bottom:14px;
 color:var(--muted);
 }
 
 footer{
 padding:30px 0;
-border-top:1px solid var(--line);
 text-align:center;
-color:var(--muted);
+border-top:1px solid var(--line);
 margin-top:40px;
+color:var(--muted);
 }
 
 .modal{
@@ -150,6 +203,13 @@ width:100%;
 max-width:1100px;
 max-height:90vh;
 overflow:auto;
+}
+
+.top-modal{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:15px;
 }
 
 .gallery-main img{
@@ -177,8 +237,8 @@ transition:.2s;
 }
 
 .gallery-grid img:hover{
+transform:scale(1.03);
 opacity:1;
-transform:scale(1.04);
 }
 
 .active-thumb{
@@ -186,17 +246,20 @@ border:2px solid var(--accent)!important;
 opacity:1!important;
 }
 
-.top-modal{
-display:flex;
-justify-content:space-between;
-align-items:center;
-margin-bottom:15px;
+@media(max-width:760px){
+
+.hero h1{
+font-size:42px;
 }
 
-@media(max-width:760px){
-.hero h1{font-size:42px}
-.links{display:none}
-.two{grid-template-columns:1fr}
+.links{
+display:none;
+}
+
+.two{
+grid-template-columns:1fr;
+}
+
 }
 </style>
 </head>
@@ -206,6 +269,7 @@ margin-bottom:15px;
 <nav>
 <div class="wrap">
 <div class="logo">Lourdes.dev</div>
+
 <div class="links">
 <a href="#projects">Projects</a>
 <a href="#about">About</a>
@@ -215,25 +279,35 @@ margin-bottom:15px;
 </nav>
 
 <section class="hero wrap">
+
 <div class="tag">Open to internships & junior roles</div>
+
 <h1>Lourdes de la Rosa</h1>
-<p>Software Engineering student focused on desktop systems, SQL databases and practical business solutions.</p>
+
+<p>
+Software Engineering student focused on desktop systems, SQL databases and practical business solutions.
+</p>
 
 <div class="btns">
 <a href="#projects" class="btn primary">View Projects</a>
 <a href="#contact" class="btn">Contact</a>
 <a href="#" onclick="openCV()" class="btn">Download CV</a>
 </div>
+
 </section>
 
 <section id="projects" class="section wrap">
+
 <h2 class="title">Projects</h2>
 
 <div class="grid">
 
 <div class="card">
 <h3>POS System</h3>
-<p class="muted">Sales system with users, roles, clients, products, inventory, purchases and reports.</p>
+
+<p class="muted">
+Sales system with users, roles, clients, products, inventory, purchases and reports.
+</p>
 
 <div class="tags">
 <span class="chip">C#</span>
@@ -248,7 +322,10 @@ margin-bottom:15px;
 
 <div class="card">
 <h3>Contacts Manager</h3>
-<p class="muted">JavaScript application for managing contacts.</p>
+
+<p class="muted">
+JavaScript app for managing contacts with add, edit and delete.
+</p>
 
 <div class="tags">
 <span class="chip">JavaScript</span>
@@ -259,7 +336,10 @@ margin-bottom:15px;
 
 <div class="card">
 <h3>Portfolio Website</h3>
-<p class="muted">Responsive portfolio website built with HTML/CSS.</p>
+
+<p class="muted">
+Responsive portfolio website built with HTML and CSS.
+</p>
 
 <div class="tags">
 <span class="chip">HTML</span>
@@ -274,23 +354,33 @@ margin-bottom:15px;
 
 <div class="card">
 <h2 class="title">About Me</h2>
-<p class="muted">Currently studying Software Engineering at INTEC. Interested in software development, UI and databases.</p>
+
+<p class="muted">
+Currently studying Software Engineering at INTEC. Interested in software development, databases and UI design.
+</p>
 </div>
 
 <div class="card">
 <h2 class="title">Skills</h2>
-<p class="muted">C# · SQL Server · JavaScript · HTML/CSS · Git · CRUD · OOP</p>
+
+<p class="muted">
+C# · SQL Server · JavaScript · HTML/CSS · Git · CRUD · OOP
+</p>
 </div>
 
 </section>
 
 <section id="contact" class="section wrap">
+
 <div class="card">
+
 <h2 class="title">Contact</h2>
+
 <div class="contact-item">Email: lourdesdelarosaramirez225@gmail.com</div>
 <div class="contact-item">GitHub: github.com/lourdesDeLaRosa</div>
 <div class="contact-item">LinkedIn: linkedin.com/in/lourdes-de-la-rosa</div>
-<div class="contact-item">Dominican Republic</div>
+<div class="contact-item">Santo Domingo, Dominican Republic</div>
+
 </div>
 </section>
 
@@ -301,11 +391,13 @@ margin-bottom:15px;
 <div class="modal" id="cvModal">
 <div class="modal-box" style="max-width:420px">
 
-<h3 style="margin-bottom:10px">Choose CV</h3>
+<h3 style="margin-bottom:12px">Choose CV</h3>
 
-<a href="lourdesDeLaRosaCV.pdf" target="_blank" class="btn primary">CV Español</a>
-<a href="lourdesDeLaRosaCV_ENG.pdf" target="_blank" class="btn" style="margin-top:10px">CV English</a>
-<a href="#" onclick="closeCV()" class="btn" style="margin-top:10px">Close</a>
+<a href="lourdesDeLaRosaCV.pdf" target="_blank" class="btn primary">CV Español</a><br><br>
+
+<a href="lourdesDeLaRosaCV_ENG.pdf" target="_blank" class="btn">CV English</a><br><br>
+
+<a href="#" onclick="closeCV()" class="btn">Close</a>
 
 </div>
 </div>
@@ -324,23 +416,23 @@ margin-bottom:15px;
 
 <div class="gallery-grid">
 
-<img src="/images/login.png" onclick="changePOS(this)" class="active-thumb">
-<img src="/images/articulos_cons.png" onclick="changePOS(this)">
-<img src="/images/articulos_mant.png" onclick="changePOS(this)">
-<img src="/images/categorias_cons.png" onclick="changePOS(this)">
-<img src="/images/categorias_mant.png" onclick="changePOS(this)">
-<img src="/images/clientes_cons.png" onclick="changePOS(this)">
-<img src="/images/clientes_mant.png" onclick="changePOS(this)">
-<img src="/images/contenedor.png" onclick="changePOS(this)">
-<img src="/images/ingresos_cons (2).png" onclick="changePOS(this)">
-<img src="/images/ingresos_mant.png" onclick="changePOS(this)">
-<img src="/images/proveedores_cons.png" onclick="changePOS(this)">
-<img src="/images/proveedores_mant.png" onclick="changePOS(this)">
-<img src="/images/roles.png" onclick="changePOS(this)">
-<img src="/images/usuarios_cons.png" onclick="changePOS(this)">
-<img src="/images/usuarios_mant.png" onclick="changePOS(this)">
-<img src="/images/ventas_cons.png" onclick="changePOS(this)">
-<img src="/images/ventas_mant.png" onclick="changePOS(this)">
+<img src="images/login.png" onclick="changePOS(this)" class="active-thumb">
+<img src="images/articulos_cons.png" onclick="changePOS(this)">
+<img src="images/articulos_mant.png" onclick="changePOS(this)">
+<img src="images/categorias_cons.png" onclick="changePOS(this)">
+<img src="images/categorias_mant.png" onclick="changePOS(this)">
+<img src="images/clientes_cons.png" onclick="changePOS(this)">
+<img src="images/clientes_mant.png" onclick="changePOS(this)">
+<img src="images/contenedor.png" onclick="changePOS(this)">
+<img src="images/ingresos_cons (2).png" onclick="changePOS(this)">
+<img src="images/ingresos_mant.png" onclick="changePOS(this)">
+<img src="images/proveedores_cons.png" onclick="changePOS(this)">
+<img src="images/proveedores_mant.png" onclick="changePOS(this)">
+<img src="images/roles.png" onclick="changePOS(this)">
+<img src="images/usuarios_cons.png" onclick="changePOS(this)">
+<img src="images/usuarios_mant.png" onclick="changePOS(this)">
+<img src="images/ventas_cons.png" onclick="changePOS(this)">
+<img src="images/ventas_mant.png" onclick="changePOS(this)">
 
 </div>
 
@@ -365,7 +457,7 @@ document.getElementById("posModal").style.display="none";
 }
 
 function changePOS(img){
-document.getElementById("mainPOS").src=img.src;
+document.getElementById("mainPOS").src = img.src;
 
 document.querySelectorAll(".gallery-grid img").forEach(el=>{
 el.classList.remove("active-thumb");
