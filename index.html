@@ -261,6 +261,51 @@ display:none;
 grid-template-columns:1fr;
 }
 
+ .cv-box{
+background:var(--card);
+border:1px solid var(--line);
+border-radius:18px;
+padding:30px 25px;
+width:100%;
+max-width:380px;
+text-align:center;
+box-shadow:0 20px 40px rgba(0,0,0,.35);
+animation:fadeIn .25s ease;
+}
+
+.cv-box h3{
+margin-bottom:6px;
+font-size:26px;
+}
+
+.cv-sub{
+color:var(--muted);
+font-size:14px;
+margin-bottom:20px;
+}
+
+.cv-buttons{
+display:flex;
+flex-direction:column;
+gap:12px;
+}
+
+.cv-buttons .btn{
+width:100%;
+padding:14px;
+font-size:16px;
+}
+
+.close-btn{
+margin-top:15px;
+width:100%;
+}
+
+@keyframes fadeIn{
+from{opacity:0;transform:scale(.95)}
+to{opacity:1;transform:scale(1)}
+}
+
 }
 </style>
 </head>
@@ -459,19 +504,17 @@ Santo Domingo Este, Dominican Republic
 </footer>
 
 <div class="modal" id="cvModal">
- <div class="cv-box">
+  <div class="cv-box">
 
-    <h3>Choose CV</h3>
+    <h3>Download CV</h3>
+    <p class="cv-sub">Choose your preferred language</p>
 
     <div class="cv-buttons">
-      <a href="lourdesDeLaRosaCV.pdf" target="_blank" class="btn primary">CV Español</a>
-
-      <a href="lourdesDeLaRosaCV_ENG.pdf" target="_blank" class="btn">
-        CV English
-      </a>
+      <a href="lourdesDeLaRosaCV.pdf" target="_blank" class="btn primary">Español</a>
+      <a href="lourdesDeLaRosaCV_ENG.pdf" target="_blank" class="btn">English</a>
     </div>
 
-    <a href="#" onclick="closeCV()" class="btn close-btn">Close</a>
+    <button onclick="closeCV()" class="btn close-btn">Close</button>
 
   </div>
 </div>
