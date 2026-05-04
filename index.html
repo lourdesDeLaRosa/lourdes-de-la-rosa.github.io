@@ -265,52 +265,24 @@ grid-template-columns:1fr;
 position:relative;
 background:var(--card);
 border:1px solid var(--line);
-border-radius:20px;
-padding:35px 30px;
+border-radius:18px;
+padding:30px 25px;
 width:100%;
-max-width:360px;
-text-align:center;
-box-shadow:0 25px 60px rgba(0,0,0,.4);
-animation:fadeIn .25s ease;
-}
-
-.cv-box h3{
-font-size:26px;
-margin-bottom:25px;
-}
-
-.cv-buttons{
+max-width:380px;
 display:flex;
-justify-content:center;
-gap:12px;
+flex-direction:column;
+align-items:center;
 }
 
 .cv-btn{
-padding:12px 20px;
-border-radius:12px;
-border:1px solid var(--line);
-background:transparent;
-color:var(--text);
-font-size:15px;
-cursor:pointer;
-transition:.2s;
-}
-
-.cv-btn:hover{
-transform:translateY(-2px);
-border-color:var(--accent);
-}
-
-.cv-btn.primary{
-background:linear-gradient(135deg,var(--accent),#d3a7ff);
-color:#111;
-font-weight:bold;
-border:none;
+width:100%;
+margin-top:15px;
+text-align:center;
 }
 
 .cv-close{
 position:absolute;
-top:10px;
+top:12px;
 right:15px;
 font-size:22px;
 cursor:pointer;
@@ -320,12 +292,7 @@ transition:.2s;
 
 .cv-close:hover{
 color:white;
-}
-
-@keyframes fadeIn{
-from{opacity:0;transform:scale(.9)}
-to{opacity:1;transform:scale(1)}
-}
+ 
 
 </style>
 </head>
@@ -526,19 +493,17 @@ Santo Domingo Este, Dominican Republic
 <div class="modal" id="cvModal">
   <div class="cv-box">
 
-    <h3>Download CV</h3>
+   <span class="cv-close" onclick="closeCV()">×</span>
 
-    <div class="cv-buttons">
-      <a href="lourdesDeLaRosaCV.pdf" target="_blank" class="cv-btn primary">
-        🇪🇸 Español
-      </a>
+    <h3 style="margin-bottom:10px">Choose CV</h3>
 
-      <a href="lourdesDeLaRosaCV_ENG.pdf" target="_blank" class="cv-btn">
-        🇺🇸 English
-      </a>
-    </div>
+    <a href="lourdesDeLaRosaCV.pdf" target="_blank" class="btn primary cv-btn">
+      CV Español
+    </a>
 
-    <span onclick="closeCV()" class="cv-close">×</span>
+    <a href="lourdesDeLaRosaCV_ENG.pdf" target="_blank" class="btn cv-btn">
+      CV English
+    </a>
 
   </div>
 </div>
